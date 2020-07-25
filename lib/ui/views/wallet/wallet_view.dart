@@ -1,3 +1,6 @@
+import 'dart:io';
+import 'dart:ui';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
@@ -20,6 +23,7 @@ class WalletViewState extends State<WalletView>
   AnimationController _controller;
   CardsAnimation cardsAnimation;
   static PanelController _slidingPanelController = new PanelController();
+  final GlobalKey _cardKey = GlobalKey();
 
   @override
   void initState() {
@@ -41,10 +45,15 @@ class WalletViewState extends State<WalletView>
           return AnimatedBuilder(
               animation: cardsAnimation.controller,
               builder: (BuildContext context, Widget child) {
+                print("view top padding ::: ${window.viewPadding.bottom}");
                 return SlidingUpPanel(
                   controller: _slidingPanelController,
-                  minHeight: MediaQuery.of(context).size.height - 420,
-                  maxHeight: MediaQuery.of(context).size.height,
+                  minHeight: MediaQuery.of(context).size
+                      .height - (420 + getTopMargin()),
+                  maxHeight: MediaQuery
+                      .of(context)
+                      .size
+                      .height,
                   borderRadius: kSlidingUpPanelCornerRadius,
                   boxShadow: [
                     BoxShadow(
@@ -65,7 +74,7 @@ class WalletViewState extends State<WalletView>
                     ],
                   ),
                   panel: Padding(
-                    padding: const EdgeInsets.only(bottom: 76),
+                    padding: EdgeInsets.only(bottom: (76 + getBottomMargin())),
                     child: Column(
                       children: [
                         Padding(
@@ -95,16 +104,16 @@ class WalletViewState extends State<WalletView>
                                 top: 24, left: 16.0, right: 16.0),
                             child: walletViewModel.isBusy == true
                                 ? Align(
-                                    alignment: Alignment.topCenter,
-                                    child: CupertinoActivityIndicator())
+                                alignment: Alignment.topCenter,
+                                child: CupertinoActivityIndicator())
                                 : ListView.builder(
-                                    itemCount: walletViewModel
-                                        .expenseData.expenseData.length,
-                                    itemBuilder:
-                                        (BuildContext context, int index) {
-                                      return ExpenseDateTile(
-                                          walletViewModel.expenseData, index);
-                                    }),
+                                itemCount: walletViewModel
+                                    .expenseData.expenseData.length,
+                                itemBuilder:
+                                    (BuildContext context, int index) {
+                                  return ExpenseDateTile(
+                                      walletViewModel.expenseData, index);
+                                }),
                           ),
                         ),
                       ],
@@ -149,5 +158,21 @@ class WalletViewState extends State<WalletView>
   void dispose() {
     super.dispose();
     _controller.dispose();
+  }
+
+  int getTopMargin() {
+    if (window.viewPadding.top > 100) {
+      return 70;
+    } else {
+      return 0;
+    }
+  }
+
+  double getBottomMargin() {
+    if (window.viewPadding.bottom > 80) {
+      return 70.0;
+    } else {
+      return 0.0;
+    }
   }
 }

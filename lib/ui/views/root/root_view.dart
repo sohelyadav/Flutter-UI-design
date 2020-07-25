@@ -41,7 +41,7 @@ class _RootViewState extends State<RootView> {
     return ViewModelBuilder<RootViewModel>.reactive(
       viewModelBuilder: () => RootViewModel(),
       builder: (context, dashboardViewModel, child) => AnnotatedRegion(
-        value: SystemUiOverlayStyle.light,
+        value: SystemUiOverlayStyle.dark,
         child: Scaffold(
           backgroundColor: kCanvasColor,
           body: SafeArea(

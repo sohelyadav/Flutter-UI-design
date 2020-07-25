@@ -71,7 +71,7 @@ class _VirtualCardWidgetState extends State<VirtualCardWidget> {
                                   crossAxisAlignment: CrossAxisAlignment.start,
                                   children: [
                                     Text(
-                                      "Sales team",
+                                      "Sales Team",
                                       style: GoogleFonts.muli(
                                           color: kWhite,
                                           fontSize: 16.0,
