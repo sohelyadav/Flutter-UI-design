@@ -1,0 +1,94 @@
+{
+  "expenseData": [
+    {
+      "date": "Today",
+      "totalAmount": "-260.99",
+      "data": [
+        {
+          "logo": "assets/images/grab.png",
+          "serviceName": "Grab Taxi",
+          "teamName": "Sales Team",
+          "amount": "10.90"
+        },
+        {
+          "logo": "assets/images/air.png",
+          "serviceName": "Singapore Airlines",
+          "teamName": "Business Travel",
+          "amount": "250.09"
+        }
+      ]
+    },
+    {
+      "date": "24, April",
+      "totalAmount": "+169.00",
+      "data": [
+        {
+          "logo": "assets/images/grab.png",
+          "serviceName": "Grab Taxi",
+          "teamName": "Accounts Team",
+          "amount": "39.00"
+        },
+        {
+          "logo": "assets/images/air.png",
+          "serviceName": "Singapore Airlines",
+          "teamName": "Hr Team",
+          "amount": "89.00"
+        },
+        {
+          "logo": "assets/images/grab.png",
+          "serviceName": "Grab Taxi",
+          "teamName": "Product Team",
+          "amount": "11.00"
+        },
+        {
+          "logo": "assets/images/air.png",
+          "serviceName": "Singapore Airlines",
+          "teamName": "Tech Team",
+          "amount": "30.00"
+        }
+      ]
+    },
+    {
+      "date": "23, April",
+      "totalAmount": "+1,269.00",
+      "data": [
+        {
+          "logo": "assets/images/air.png",
+          "serviceName": "Singapore Airlines",
+          "teamName": "Team Lunch",
+          "amount": "143.00"
+        },
+        {
+          "logo": "assets/images/grab.png",
+          "serviceName": "Grab Taxi",
+          "teamName": "Sales Team",
+          "amount": "155.00"
+        },
+        {
+          "logo": "assets/images/grab.png",
+          "serviceName": "Grab Taxi",
+          "teamName": "Other",
+          "amount": "997.00"
+        }
+      ]
+    },
+    {
+      "date": "22, April",
+      "totalAmount": "-100.40",
+      "data": [
+        {
+          "logo": "assets/images/grab.png",
+          "serviceName": "Grab Taxi",
+          "teamName": "Sales Team",
+          "amount": "56.00"
+        },
+        {
+          "logo": "assets/images/air.png",
+          "serviceName": "Singapore Airlines",
+          "teamName": "Sales Team",
+          "amount": "44.00"
+        }
+      ]
+    }
+  ]
+}
