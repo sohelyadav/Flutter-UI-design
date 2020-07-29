@@ -1,6 +1,6 @@
-# klearcard
+# UI Design
 
-Smaple project for Klear  card  assignment 
+Flutter UI design sample for expense tracking app
 
 ## Screen shots
 
